@@ -1,0 +1,26 @@
+.Toolbar {
+  background: #ffe4c4 !important;
+  margin-bottom: 25px !important;
+  a:hover {
+      background-color: rgba(24, 54, 201, 0.10196078431372549) !important;
+  }
+}
+
+.LogoMobile {
+  margin: 0px 42% 0px !important;
+}
+
+.Logo {
+  font-size: 32px !important;
+  margin: auto !important;
+  padding: 0px !important;
+  left: auto;
+
+  div {
+    display: inline !important;
+    white-space: nowrap !important;
+  }
+  img {
+    float: right !important;
+  }
+}

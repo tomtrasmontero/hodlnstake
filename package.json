@@ -1,0 +1,41 @@
+{
+  "name": "crypto-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/tomtrasmontero/Cryptofolio.git",
+  "author": "tomtrasmontero <tomtrasmontero@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev:server": "DATABASE_URL=postgres://localhost/cryptoDB_test nodemon server/server.dev.js",
+    "test:server": "DATABASE_URL=postgres://localhost/cryptoDB_test SYNC=false mocha --exit server/test/",
+    "test:client": "jest client/ --watch",
+    "start": "node server/server.js",
+    "client": "cd client && yarn start",
+    "start:dev": "SYNC=true concurrently --kill-others-on-fail \"yarn dev:server\" \"yarn client\"",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "newsapi": "^2.2.0",
+    "nodemailer": "^4.6.0",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.32.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "concurrently": "^3.5.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "mocha": "^5.0.0",
+    "supertest": "^3.0.0"
+  }
+}

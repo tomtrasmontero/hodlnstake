@@ -1,0 +1,17 @@
+.News {
+  padding-bottom: 3rem;
+  &:hover .NewsArticle {
+    background-color: rgba(24, 54, 201, 0.10196078431372549) !important;
+  }
+}
+
+.NewsArticle a {
+  float: right !important;
+  color: #4ca7e9 !important;
+  text-decoration: underline !important;
+  margin: 6px !important;
+}
+
+.News a {
+  color: #212121;
+}
