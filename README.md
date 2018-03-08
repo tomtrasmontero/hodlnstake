@@ -4,6 +4,7 @@ https://creativecommons.org/licenses/by-nc/3.0/
 
 # Update Coin List
 curl "https://min-api.cryptocompare.com/data/all/coinlist" > file.json
+seed after install
 
 #Credit
 Logo - Gregor Cresnor
